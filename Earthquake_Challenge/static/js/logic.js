@@ -2,18 +2,8 @@
 console.log("It is working");
 
 // Create the map object with a center and zoom level.
-let map = L.map('mapid').setView([40.7, -94.5], 4);
+// let map = L.map('mapid').setView([40.7, -94.5], 4);
 
-// Another technique to create the map
-// Create the map object with a center and zoom level.
-
-// Create the map object with a center and zoom level.
-// let map = L.map("mapid", {
-//     center: [
-//         40.7, -94.5
-//     ],
-//     zoom: 4
-// });
 
 // tile layer site: https://docs.mapbox.com/api/maps/styles/
 // We create the tile layer that will be the background of our map.
@@ -35,8 +25,32 @@ let satelliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/
     accessToken: API_KEY
 });
 
-// Then we add our 'graymap' tile layer to the map.
-streets.addTo(map);
+let dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/dark-v10',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: API_KEY
+});
+
+// Create a base layer that holds both maps.
+let baseMaps = {
+    Street: streets,
+    Dark: dark,
+    Satellite: satelliteStreets,
+  };
+
+// Another technique to create the map
+// Create the map object with center, zoom level and default layer.
+let map = L.map('mapid', {
+    center: [30, 30],
+    zoom: 2,
+    layers: [streets]
+})
+
+// Pass our map layers into our layers control and add the layers control to the map.
+L.control.layers(baseMaps).addTo(map);
 
 // leaflet markers: https://leafletjs.com/reference-1.6.0.html#circlemarker
 //  Add a marker to the map for Los Angeles, California.
@@ -81,3 +95,13 @@ L.geoJSON(sanFranAirport, {
         layer.bindPopup("<h4>" + feature.properties.city + "</h4>" + "<hr>" + "<br>" + "<h6>faa code </h6>" + feature.properties.faa);
     }
 }).addTo(map);
+
+// link to airport geoJSON url form github
+let airportData = "https://raw.githubusercontent.com/l-aldarondo/Mapping_Earthquakes/main/Earthquake_Challenge/static/data/majorAirports.json";
+
+// Grabbing our GeoJSON data.
+d3.json(airportData).then(function(data) {
+    console.log(data);
+  // Creating a GeoJSON layer with the retrieved data.
+  L.geoJSON(data).addTo(map);
+});
