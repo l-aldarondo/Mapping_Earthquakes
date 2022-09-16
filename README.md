@@ -14,8 +14,6 @@ This project consists of three technical analysis deliverables.
 ### Purpose
 
 The purpose of this project is to visually show the differences between the magnitudes of earthquakes all over the world for the last seven days.
-We created our earthquake map with two different maps and the earthquake overlay. Then we added the earthquake data in relation to the tectonic plates’ location on the earth, the earthquakes with a magnitude greater than 4.5, and we added the data on a third map.
-
 
 
 ## Methodology
@@ -50,7 +48,7 @@ Using JavaScript, Leaflet, and D3, we re-factored the code of our index.html fil
 
 ## Summary
 
-- For this project we were able to create a dynamic dashboard that provided the client an effective way to filter the data for each bacterial sample, and provided 3 visualizations that changed accordenly with the sample selection. In order to let the client to try and feel the app we deployed the webpage using GitHub pages:
+- We created our earthquake map with two different maps and the earthquake overlay. Then we added the earthquake data in relation to the tectonic plates’ location on the earth, the earthquakes with a magnitude greater than 4.5, and we added the data on a third map.
 
      - [link to deployed webpage](https://l-aldarondo.github.io/Biodiversity_with_Plotly/)
 
@@ -63,3 +61,5 @@ Using JavaScript, Leaflet, and D3, we re-factored the code of our index.html fil
 [Earthquake data](https://earthquake.usgs.gov/)
  
 [Mapbox](https://docs.mapbox.com/api/maps/styles/)
+
+[Leaflet](https://leafletjs.com/examples/quick-start/)
