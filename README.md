@@ -3,7 +3,7 @@ Creating interactive maps using the Leaflet.js Application Programming Interface
 
 ## Background
 ### Overview
-This project consists of four technical analysis deliverables.
+This project consists of three technical analysis deliverables.
 
 - Deliverable 1: Add Tectonic Plate Data
 
@@ -14,16 +14,15 @@ This project consists of four technical analysis deliverables.
 ### Purpose
 
 The purpose of this project is to visually show the differences between the magnitudes of earthquakes all over the world for the last seven days.
-
-created your earthquake map with two different maps and the earthquake overlay. Now, Basil and Sadhana would like to see the earthquake data in relation to the tectonic plates’ location on the earth, and they would like to see all the earthquakes with a magnitude greater than 4.5 on the map, and they would like to see the data on a third map.
+We created our earthquake map with two different maps and the earthquake overlay. Then we added the earthquake data in relation to the tectonic plates’ location on the earth, the earthquakes with a magnitude greater than 4.5, and we added the data on a third map.
 
 
 
 ## Methodology
 
--Your approach will be to use the JavaScript and the D3.js library to retrieve the coordinates and magnitudes of the earthquakes from the GeoJSON data. You'll use the Leaflet library to plot the data on a Mapbox map through an API request and create interactivity for the earthquake data.
-Now that you have an overview of the project plan, let's set up a Mapbox account and get the API token you'll need to create geographical maps.
+- Used JavaScript and the D3.js library to retrieve the coordinates and magnitudes of the earthquakes from the GeoJSON data. 
 
+- Used Leaflet library to plot the data on a Mapbox map through an API request and create interactivity for the earthquake data.
 
 ## Resources
  
@@ -37,7 +36,7 @@ Software:
 
 ### Results
 
-Using JavaScript, Plotly, and D3, we re-factored the code of our index.html file to create a dashboard and then we modified the webpage using HTML and Bootstrap as shown in image (a).
+Using JavaScript, Leaflet, and D3, we re-factored the code of our index.html file to create an interactive earthquake map as shown in image (a).
 
 <br/>
 
