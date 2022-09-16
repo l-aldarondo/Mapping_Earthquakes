@@ -62,7 +62,7 @@ Using JavaScript, Leaflet, and D3, we re-factored the code of our index.html fil
 
 - We created our earthquake map with two different maps (Fig a, b) and the earthquake overlay. Then we added the earthquake data in relation to the tectonic plates’ location on the earth, the earthquakes with a magnitude greater than 4.5, and we added the data on a third map (Fig c).
 
-     - [link to deployed webpage](https://l-aldarondo.github.io/Mapping_Earthquakes/)
+     - [index.html](https://l-aldarondo.github.io/Mapping_Earthquakes/)
 
 <br/>
 
